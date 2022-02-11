@@ -40,11 +40,11 @@ int lastoccurence(int arr[],int n,int key)
         ans=mid;
         s=mid+1;
       }
-      else if(arr[mid]>key)
+      else if(key>arr[mid])
       {
         s=mid+1;
       }
-      else if(arr[mid]<key)
+      else if(key<arr[mid])
       {
         e=mid-1;
       }
