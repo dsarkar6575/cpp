@@ -1,0 +1,38 @@
+#include <iostream>
+
+
+using namespace std;
+bool linearsearch(int arr[],int n,int key)
+{
+   for(int i=0;i<=n;i++)
+     {
+       if(arr[i]==key)
+       {
+         return 1;
+       }
+     }
+  return 0;
+}
+int main()
+{
+    int n,k;
+  cout<<"Enter the size of array:";
+  cin>>k;
+    int arr[100];
+    for(int i=0;i<k;i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"Enter the search element:";
+    cin>>n;
+    int evenindex=linearsearch(arr,k,n);
+  if(evenindex)
+  {
+    cout<<"Key is present.";
+  }
+    else
+  {
+    cout<<"Key is not preasent.";
+  }
+   return 0;
+}
