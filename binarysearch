@@ -1,4 +1,6 @@
-#include<bits\stdc++.h>
+#include <iostream>
+
+
 using namespace std;
 int binarysearch(int arr[],int n,int key)
 {
@@ -24,17 +26,24 @@ int binarysearch(int arr[],int n,int key)
 }
 int main()
 {
-    int n;
-    int arr[4];
-    for(int i=0;i<4;i++)
+    int n,k;
+  cout<<"Enter the size of array:";
+  cin>>k;
+    int arr[100];
+    for(int i=0;i<k;i++)
     {
         cin>>arr[i];
     }
     cout<<"Enter the search element:";
     cin>>n;
-    int evenindex=binarysearch(arr,4,n);
-    
-    cout<<"Index of 18 is:"<<evenindex<<endl;
-    
-
+    int evenindex=binarysearch(arr,k,n);
+  if(evenindex==n)
+  {
+    cout<<"Index of "<<n<<" "<<"is:"<<evenindex<<endl;
+  }
+    else
+  {
+    cout<<"Number is not found.";
+  }
+   return 0;
 }
